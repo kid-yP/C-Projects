@@ -245,7 +245,7 @@ public:
 
 private:
     void saveToFile(const string& filename) {
-        ofstream file(filename);
+        ofstream file("patient.txt"|ios::app);
         if (file.is_open()) {
             for (const auto& patient : patients) {
                 file << "Name: " << patient.name << endl;
